@@ -1,52 +1,52 @@
+/* eslint-disable strict */
 $(startApp);
 
 function startApp() {
 
-    showPage(1);
+  showPage(1);
 
-    addEventListeners();
+  addEventListeners();
 }
 
 function addCandies(candyInfos) {
+  const template = $('#candybar-template').html();
 
-    const template = $('#candybar-template').html();
+  const render = Handlebars.compile(template);
 
-    const render = Handlebars.compile(template);
+  candyElements = [];
 
-    candyElements = [];
-
-    candyInfos.forEach(candyInfo => {
-        candyElements.push(render(candyInfo));
-    });
+  candyInfos.forEach(candyInfo => {
+    candyElements.push(render(candyInfo));
+  });
 
 
-    $('#candies td').remove();
+  $('#candies td').remove();
 
-    $('#candies').append(candyElements);
+  $('#candies').append(candyElements);
 }
 
 function addEventListeners() {
 
-    $('nav li').on('click', event => {
+  $('nav li').on('click', event => {
 
-        const pageNum = $(event.target).data('page');
+    const pageNum = $(event.target).data('page');
 
-        showPage(pageNum);
+    showPage(pageNum);
 
-    });
+  });
 }
 
 function showPage(pageNum) {
 
-    let dataName;
+  let dataName;
 
-    if (pageNum === 1) {
-        dataName = 'candies.json';
-    } else {
-        dataName = 'chips.json';
-    }
+  if (pageNum === 1) {
+    dataName = 'candies.json';
+  } else {
+    dataName = 'chips.json';
+  }
 
-    $.get(dataName, 'json')
-        .then(addCandies)
-        .catch(error => console.error(error));
+  $.get(dataName, 'json')
+    .then(addCandies)
+    .catch(error => console.error(error));
 }

@@ -6,13 +6,21 @@ const leftImage = document.getElementById('left');
 const centerImage = document.getElementById('center');
 const rightImage = document.getElementById('right');
 
+<<<<<<< HEAD
 let allProducts = [];
+=======
+const allProducts = [];
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915
 const container = document.getElementById('image_container');
 const viewed = [];
 const labels = [];
 const pics = [leftImage, centerImage, rightImage];
 const list = document.getElementById('productlist');
+<<<<<<< HEAD
 let totalClicks = 0;
+=======
+const totalClicks = 0;
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915
 const views = [];
 const votes = [];
 
@@ -35,8 +43,15 @@ function displayPics(){
       viewed.push(rando);
     }
   }
+<<<<<<< HEAD
   // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the constiable declaration from `const to `const`.
   // rando doesn't work because it is defined in a while block of code and then called outside of that block of code.
+=======
+  console.log(rando);
+  // because the variable rando was scoped tothe function displayPics
+  // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the constiable declaration from `const to `const`.
+  // PUT YOUR RESPONSE IN THIS COMMENT
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915
   console.log(viewed);
 
   for (let i = 0; i < 3; i++){
@@ -72,7 +87,11 @@ function handleClick(event) {
 function showList() {
   for(let i = 0; i < allProducts.length; i++) {
     const liEl = document.createElement('li');
+<<<<<<< HEAD
     liEl.textContent = `${allProducts[i].name} has ${allProducts[i].votes} votes in ${allProducts[i].views} views`;
+=======
+    liEl.textContent = allProducts[i].name + ' has ' + allProducts[i].votes + ' votes in ' + allProducts[i].views + ' views';
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915
     list.appendChild(liEl);
   }
 }

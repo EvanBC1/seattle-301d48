@@ -1,29 +1,22 @@
+<<<<<<< HEAD:class-00/lab-c/starter-code/styles/modules.css
 #logo {
   float: left;
   padding-bottom: 25px;
   color: black;
   text-decoration: none;
 }
+=======
 
-#logo img {
-  float: left;
-}
 
-#logo h1 {
-  padding-left: 50px;
-  font-family: 'Yellowtail', cursive;
-  font-size: 2.4em;
-}
 
-#slogan {
-  width: 250px;
-  padding-left: 55px;
-  color: #a3a4a2;
-  font-family: 'Abel', sans-serif;
-  font-size: .65em;
-  text-transform: uppercase;
-}
 
+
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915:class-00/lab-c/starter-code/styles/style.css
+
+
+
+
+<<<<<<< HEAD:class-00/lab-c/starter-code/styles/modules.css
 .print, .date {
   color: #a9a8a5;
   font-family: 'Abel', sans-serif;
@@ -95,3 +88,7 @@ footer section p{
   text-align: center;
   color: #aaa;
 }
+=======
+
+
+>>>>>>> e7bfac1aa999930ff2031cb8dc845a99a8ce9915:class-00/lab-c/starter-code/styles/style.css
